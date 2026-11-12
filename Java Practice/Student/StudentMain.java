@@ -73,15 +73,15 @@ public class StudentMain {
         // TODO 1: Implement the method based on the method-level comments.
         //1
         System.out.printf("%-10s %-10s %5s %5s  %s%n", "Name", "Level","GPA","Min","Thesis Topic");
-        System.out.printf("------------------------------------");
+        System.out.println("-------------------------------------------------");
 
         for (Student s : students) {
-            System.out.printf("%-10s %-10s %5s %5s  %s%n",s.getName(), s.getLevel(), s.getMinGPA());
+            System.out.printf("%-10s %-10s %5.2f %5.2f  ", s.getName(),s.getLevel(),s.getGPA() ,s.getMinGPA());
         
 
             if (s instanceof GraduateStudent) {
                 GraduateStudent g = (GraduateStudent) s;
-                System.out.print("  " + g.getThesisTopic());
+                System.out.print(g.getThesisTopic());
             }
 
             System.out.println();
